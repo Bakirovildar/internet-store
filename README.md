@@ -1,4 +1,4 @@
-# internet-store
+# internet-store1
 
 ## Project setup
 ```
