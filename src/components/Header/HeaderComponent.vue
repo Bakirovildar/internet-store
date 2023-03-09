@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <InfoNav/>
+    <HeaderMain/>
   </div>
 </template>
 
 <script>
 import InfoNav from "@/components/Header/HeaderInfo/InfoNav";
+import HeaderMain from "@/components/Header/HeaderMain/HeaderMain";
 
 export default {
-  components: {InfoNav}
+  components: {HeaderMain, InfoNav}
 }
 </script>
 
