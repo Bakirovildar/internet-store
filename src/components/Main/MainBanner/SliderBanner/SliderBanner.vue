@@ -1,44 +1,25 @@
 <template>
   <div class="col-lg-8">
-    <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#header-carousel" data-slide-to="1"></li>
-        <li data-target="#header-carousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item position-relative active" style="height: 430px;">
-          <img class="position-absolute w-100 h-100" src="src/assets/img/carousel-1.jpg" style="object-fit: cover;">
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 700px;">
-              <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
-              <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-              <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item position-relative" style="height: 430px;">
-          <img class="position-absolute w-100 h-100" src="src/assets/img/carousel-2.jpg" style="object-fit: cover;">
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 700px;">
-              <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
-              <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-              <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item position-relative" style="height: 430px;">
-          <img class="position-absolute w-100 h-100" src="src/assets/img/carousel-3.jpg" style="object-fit: cover;">
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 700px;">
-              <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Kids Fashion</h1>
-              <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-              <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
+    <n-carousel autoplay>
+      <div><img
+          class="carousel-img"
+          src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      >
+        <span class="text-carousel">Hello</span>
       </div>
-    </div>
+      <img
+          class="carousel-img"
+          src="https://images.unsplash.com/photo-1542219550-37153d387c27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      >
+      <img
+          class="carousel-img"
+          src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      >
+      <img
+          class="carousel-img"
+          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+      >
+    </n-carousel>
   </div>
 </template>
 
@@ -50,5 +31,18 @@ export default {
 </script>
 
 <style scoped>
+.carousel-img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
 
+.text-carousel {
+  position: absolute;
+  left: auto;
+
+  top: 50%;
+  color: white;
+  font-size: 46px;
+}
 </style>
