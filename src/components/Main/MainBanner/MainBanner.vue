@@ -1,11 +1,23 @@
 <template>
-  <div class="container-fluid mb-3">
-    <div class="row px-xl-5">
-      <div class="col-lg-8">
-        <SliderBanner/>
+  <div>
+    <div class="container-fluid mb-3">
+      <div class="row px-xl-5">
+        <div class="col-lg-8">
+          <SliderBanner/>
+        </div>
+        <div class="col-lg-4">
+          <ComponentShop v-for="shop in shopComponentData" :key="shop" :img="shop.img" :sale="shop.sale"
+                         :offer="shop.offer"/>
+        </div>
       </div>
-      <div class="col-lg-4">
-        <ComponentShop v-for="shop in shopComponentData" :key="shop" :img="shop.img" :sale="shop.sale" :offer="shop.offer"/>
+    </div>
+    <div class="container-fluid pt-5">
+      <div class="row px-xl-5 pb-3">
+        <ComponentFeature
+            v-for="item in feature"
+            :key="item.id"
+            :title="item.title"
+        />
       </div>
     </div>
   </div>
@@ -14,9 +26,14 @@
 <script>
 import SliderBanner from "@/components/Main/MainBanner/SliderBanner/SliderBanner";
 import ComponentShop from "@/components/general/ComponentShop";
+import ComponentFeature from "@/components/general/ComponentFeature";
+import {mapGetters} from "vuex";
 
 export default {
-  components: {ComponentShop, SliderBanner},
+  mounted() {
+    this.feature = this.featured
+  },
+  components: {ComponentFeature, ComponentShop, SliderBanner},
   data() {
     return {
       shopComponentData: [
@@ -30,8 +47,12 @@ export default {
           sale: 'SAVE 20%',
           offer: 'Special Offer'
         },
-      ]
+      ],
+      feature: []
     }
+  },
+  computed: {
+    ...mapGetters((['featured']))
   }
 }
 </script>
