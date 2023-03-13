@@ -6,11 +6,17 @@
           <SliderBanner/>
         </div>
         <div class="col-lg-4">
-          <ComponentShop v-for="shop in shopComponentData" :key="shop" :img="shop.img" :sale="shop.sale"
-                         :offer="shop.offer"/>
+          <ComponentShop
+              v-for="shop in shopComponentData"
+              :key="shop"
+              :img="shop.img"
+              :sale="shop.sale"
+              :offer="shop.offer"
+          />
         </div>
       </div>
     </div>
+
     <div class="container-fluid pt-5">
       <div class="row px-xl-5 pb-3">
         <ComponentFeature
@@ -20,6 +26,11 @@
         />
       </div>
     </div>
+
+    <ComponentWrapper header="Categories">
+
+    </ComponentWrapper>
+
   </div>
 </template>
 
@@ -28,12 +39,13 @@ import SliderBanner from "@/components/Main/MainBanner/SliderBanner/SliderBanner
 import ComponentShop from "@/components/general/ComponentShop";
 import ComponentFeature from "@/components/general/ComponentFeature";
 import {mapGetters} from "vuex";
+import ComponentWrapper from "@/components/general/ComponentWrapper";
 
 export default {
   mounted() {
     this.feature = this.featured
   },
-  components: {ComponentFeature, ComponentShop, SliderBanner},
+  components: {ComponentWrapper, ComponentFeature, ComponentShop, SliderBanner},
   data() {
     return {
       shopComponentData: [
