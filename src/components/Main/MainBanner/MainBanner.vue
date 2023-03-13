@@ -28,7 +28,13 @@
     </div>
 
     <ComponentWrapper header="Categories">
-
+      <CategoriesCard
+          v-for="card in categoryCard"
+          :key="card.id"
+          :title="card.categoryName"
+          :description="card.howManyProducts"
+          :img="card.img"
+      />
     </ComponentWrapper>
 
   </div>
@@ -40,12 +46,14 @@ import ComponentShop from "@/components/general/ComponentShop";
 import ComponentFeature from "@/components/general/ComponentFeature";
 import {mapGetters} from "vuex";
 import ComponentWrapper from "@/components/general/ComponentWrapper";
+import CategoriesCard from "@/components/general/CategoriesCard";
 
 export default {
   mounted() {
     this.feature = this.featured
+    this.categoryCard = this.categoryProducts
   },
-  components: {ComponentWrapper, ComponentFeature, ComponentShop, SliderBanner},
+  components: {CategoriesCard, ComponentWrapper, ComponentFeature, ComponentShop, SliderBanner},
   data() {
     return {
       shopComponentData: [
@@ -60,11 +68,12 @@ export default {
           offer: 'Special Offer'
         },
       ],
-      feature: []
+      feature: [],
+      categoryCard: []
     }
   },
   computed: {
-    ...mapGetters((['featured']))
+    ...mapGetters((['featured', 'categoryProducts']))
   }
 }
 </script>
