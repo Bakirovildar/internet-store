@@ -22,6 +22,16 @@ export default createStore({
                 {id:10, categoryName: 'shoes', howManyProducts: 107, img: 'https://images.unsplash.com/photo-1543331707-30e9129663e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80'},
                 {id:11, categoryName: 'photo', howManyProducts: 178, img: 'https://images.unsplash.com/photo-1571782742478-0816a4773a10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80'},
                 {id:12, categoryName: 'shoes', howManyProducts: 145, img: 'https://images.unsplash.com/photo-1670269110677-d9e24654df8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'},
+            ],
+            featuredProducts: [
+                {id: 1, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '120', average: '0', img: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80'},
+                {id: 2, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '12', average: '1', img: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&q=80'},
+                {id: 3, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '10', average: '2', img: 'https://images.unsplash.com/photo-1543512214-318c7553f230?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'},
+                {id: 4, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '125', average: '3', img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80'},
+                {id: 5, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '128', average: '4', img: 'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'},
+                {id: 6, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '134', average: '5', img: 'https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80'},
+                {id: 7, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '135', average: '2', img: 'https://images.unsplash.com/photo-1555487505-8603a1a69755?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80'},
+                {id: 8, productName: 'Product name Nike', newPrice: '$123', oldPrice: '$180', allStars: '187', average: '4', img: 'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'},
             ]
         }
     },
@@ -33,6 +43,9 @@ export default createStore({
         },
         categoryProducts(state) {
             return state.categories
+        },
+        featuredProduct(state) {
+            return state.featuredProducts
         }
     }
 })

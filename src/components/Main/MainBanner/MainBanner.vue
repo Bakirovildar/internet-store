@@ -37,6 +37,21 @@
       />
     </ComponentWrapper>
 
+    <ComponentWrapper header="Featured products">
+      <div class="row px-xl-5">
+        <ComponentCard
+            v-for="card in featuredCard"
+            :key="card.id"
+            :img="card.img"
+            :all-stars="card.allStars"
+            :average="card.average"
+            :new-price="card.newPrice"
+            :old-price="card.oldPrice"
+            :product-name="card.productName"
+            :id="card.id"
+        />
+      </div>
+    </ComponentWrapper>
   </div>
 </template>
 
@@ -47,13 +62,15 @@ import ComponentFeature from "@/components/general/ComponentFeature";
 import {mapGetters} from "vuex";
 import ComponentWrapper from "@/components/general/ComponentWrapper";
 import CategoriesCard from "@/components/general/CategoriesCard";
+import ComponentCard from "@/components/general/CardComponent/ComponentCard";
 
 export default {
   mounted() {
     this.feature = this.featured
     this.categoryCard = this.categoryProducts
+    this.featuredCard = this.featuredProduct
   },
-  components: {CategoriesCard, ComponentWrapper, ComponentFeature, ComponentShop, SliderBanner},
+  components: {ComponentCard, CategoriesCard, ComponentWrapper, ComponentFeature, ComponentShop, SliderBanner},
   data() {
     return {
       shopComponentData: [
@@ -69,11 +86,12 @@ export default {
         },
       ],
       feature: [],
-      categoryCard: []
+      categoryCard: [],
+      featuredCard: []
     }
   },
   computed: {
-    ...mapGetters((['featured', 'categoryProducts']))
+    ...mapGetters((['featured', 'categoryProducts', 'featuredProduct']))
   }
 }
 </script>
