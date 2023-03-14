@@ -1,17 +1,17 @@
 <template>
   <HeaderComponent/>
-  <MainBanner/>
+  <MainComponent/>
 </template>
 
 <script>
 
 import HeaderComponent from "@/components/Header/HeaderComponent";
-import MainBanner from "@/components/Main/MainBanner/MainBanner";
+import MainComponent from "@/components/Main/MainComponent";
 
 export default {
   name: 'App',
   components: {
-    MainBanner,
+    MainComponent,
     HeaderComponent
   }
 }
